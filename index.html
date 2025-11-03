@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studyholic - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    header img {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0073e6;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      height: 100vh;
+    }
+
+    .button-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #e8e8e8;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+      color: #222;
+      padding: 40px;
+      border-right: 2px solid #ddd;
+    }
+
+    .button-column:last-child {
+      border-right: none;
+    }
+
+    .button-column:hover {
+      background-color: #dcdcdc;
+      transform: scale(1.02);
+    }
+
+    .button-column h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .button-column p {
+      font-size: 18px;
+      max-width: 500px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-top: 2px solid #ddd;
+      text-align: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        flex-direction: column;
+        height: auto;
+      }
+      .button-column {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+      }
+      .button-column:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
+    <nav>
+      <ul>
+        <li><a href="MCAT-Overview.html">MCAT Overview</a></li>
+        <li><a href="Exam-Sections.html">Exam Sections</a></li>
+        <li><a href="Registration.html">Registration</a></li>
+        <li><a href="Study-Resources.html">Study Resources</a></li>
+        <li><a href="Practice-Questions.html">Practice Questions</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <a href="MCAT-Overview.html" class="button-column" style="background-color:#e8f5ff;">
+      <h2>MCAT Info</h2>
+      <p>Learn about the MCAT exam structure, timing, content, and scoring to better prepare for success.</p>
+    </a>
+
+    <a href="Study-Resources.html" class="button-column" style="background-color:#fff2e8;">
+      <h2>Study for MCAT</h2>
+      <p>Explore study guides, online prep materials, and practice tests to help you master each section of the exam.</p>
+    </a>
+  </main>
+
+  <footer>
+    <p>For questions or support, contact us at 
+      <a href="mailto:mhv8sk@virginia.edu">info@studyholic.com</a>
+    </p>
+  </footer>
+</body>
+</html>

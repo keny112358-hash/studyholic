@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Resources - Studyholic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        h2 {
+            grid-column: 1 / 4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .study-tips {
+            grid-column: 1 / 4;
+            background-color: #dcdcdc;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        a.external-link {
+            color: #0073e6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a.external-link:hover {
+            text-decoration: underline;
+            color: #ff7e33;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="MCAT-Overview.html">MCAT Overview</a></li>
+                <li><a href="Exam-Sections.html">Exam Sections</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Study-Resources.html">Study Resources</a></li>
+                <li><a href="Practice-Questions.html">Practice Questions</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Study Resources</h2>
+
+        <section>
+            <h3>Books & Guides</h3>
+            <p>Kaplan and Princeton Review books.</p>
+            <p>
+                Explore comprehensive materials from 
+                <a href="https://www.khanacademy.org/test-prep/mcat" target="_blank" class="external-link">
+                    Khan Academy’s MCAT Prep
+                </a>.
+            </p>
+        </section>
+
+        <section>
+            <h3>Online Videos</h3>
+            <p>Free tutorials and video study resources.</p>
+            <p>
+                Watch this YouTube video for MCAT study strategies:
+                <a href="https://www.youtube.com/watch?v=l_WNFpdm6X4" target="_blank" class="external-link">
+                    How to Score in the 99th Percentile on the MCAT | Premed Advice from MCAT Expert Ken Tao + FREEBIES
+                </a>.
+            </p>
+        </section>
+
+        <section>
+            <h3>Diagrams & Visuals</h3>
+            <p>Charts, graphics, and study diagrams.</p>
+        </section>
+
+        <section class="study-tips">
+            <h3>Study Tips</h3>
+            <p>Quick study tips, test strategies, and time management.</p>
+        </section>
+    </main>
+</body>
+</html>

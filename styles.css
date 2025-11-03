@@ -1,0 +1,147 @@
+/* General Layout */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbfc;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    border-bottom: 3px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header img {
+    height: 55px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #006d77; /* teal accent */
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover {
+    color: #ff7e33; /* tangerine hover color */
+    background-color: rgba(255, 126, 51, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #023047;
+    margin-top: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #006d77;
+}
+
+h3 {
+    font-size: 22px;
+    color: #118ab2;
+}
+
+/* Buttons and Links */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #008080;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #ff7e33;
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Sections */
+section {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+/* Forms */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+input[type="submit"] {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff7e33;
+}
+
+/* Footer (optional for future use) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 2px solid #e0e0e0;
+    color: #777;
+    font-size: 14px;
+}

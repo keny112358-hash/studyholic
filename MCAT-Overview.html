@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCAT Overview - Studyholic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #e8e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        h2 {
+            grid-column: 1 / 4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="MCAT-Overview.html">MCAT Overview</a></li>
+                <li><a href="Exam-Sections.html">Exam Sections</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+                <li><a href="Study-Resources.html">Study Resources</a></li>
+                <li><a href="Practice-Questions.html">Practice Questions</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>MCAT Overview</h2>
+        <section>
+            <h3>Exam Structure</h3>
+            <p>Details about the MCAT exam sections, question types, and timing.</p>
+        </section>
+        <section>
+            <h3>Scoring</h3>
+            <p>Explanation of how the MCAT is scored and what the scores mean.</p>
+        </section>
+        <section>
+            <h3>Purpose of the Exam</h3>
+            <p>Why the MCAT is required and how it is used in medical school admissions.</p>
+        </section>
+    </main>
+</body>
+</html>
