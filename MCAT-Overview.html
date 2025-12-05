@@ -1,91 +1,97 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
+
+
 	<head>
+
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>MCAT Overview - Studyholic</title>
 		<link rel="stylesheet" href="styles.css">
 		<style>
 			body {
-				font-family: Arial, sans-serif;
-				margin: 0;
-				padding: 0;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
 				text-align: center;
 				background-color: #fafafa;
 				color: #333;
 				scroll-behavior: smooth;
 			}
 
-			header {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				background-color: white;
-				padding: 10px 20px;
-			}
-
-			header img {
-				height: 50px;
-				cursor: pointer;
-			}
-
-			nav ul {
-				list-style: none;
-				display: flex;
-				margin: 0;
-				padding: 0;
-				gap: 20px;
-			}
-
-			nav ul li a {
-				text-decoration: none;
-				color: #333;
-				font-weight: bold;
-			}
-
 			main {
+				flex: 1; /* grow to fill available space so footer stays at bottom */
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(2, 1fr);
 				gap: 20px;
 				padding: 20px;
+				box-sizing: border-box;
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			h2 {
+				grid-column: 1 / -1; /* span both columns */
+				margin-bottom: 20px;
+				text-align: center;
 			}
 
 			section {
 				background-color: #e8e8e8;
-				padding: 15px;
+				padding: 20px;
 				border-radius: 10px;
 				text-align: left;
 			}
 
-			h2 {
-				grid-column: 1 / 4;
-				text-align: center;
-				margin-bottom: 10px;
-				margin-top: 10px;
+			.mcattop {
+				grid-column: 1 / -1;
+				background-color: #d0e8ff;
+				padding: 20px;
+				border-radius: 10px;
 			}
 
 			h3 {
-				margin-top: 5px;
+				margin-top: 0;
 				margin-bottom: 10px;
 			}
 
-			.mcattop {
-				grid-column: 1 / 4;
-				background-color: #d0e8ff;
-				padding: 15px;
-				border-radius: 10px;
-				margin-bottom: 10px; /* space between this top section and the 3 sections */
+			ul {
+				padding-left: 20px;
+				margin: 5px 0;
+			}
+
+			footer {
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				background-color: #ffffff;
+				border-top: 2px solid #e0e0e0;
+				box-sizing: border-box;
 			}
 
 			@media (max-width: 900px) {
 				main {
 					grid-template-columns: 1fr;
 				}
+				.mcattop {
+					grid-column: auto;
+				}
 			}
 		</style>
+
+
 	</head>
+
+
 	<body>
+
+
 		<header>
+
+
 			<a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
 			<nav>
 				<ul>
@@ -96,28 +102,64 @@
 					<li><a href="FAQs.html">FAQs</a></li>
 				</ul>
 			</nav>
+
+
 		</header>
 
+
 		<main>
-			<h2>MCAT Overview</h2>
+
 
 			<section class="mcattop">
 				<h3>What is the MCAT?</h3>
 				<p>The MCAT, or Medical College Admission Test, is a standardized exam created by the AAMC (Association of American Medical Colleges) to evaluate knowledge and skills for medical school admission.</p>
 			</section>
 
+
 			<section>
 				<h3>Exam Structure</h3>
 				<p>The MCAT consists of four sections: Biological Sciences, Chemical and Physical Foundations, Psychological and Social Foundations, and Critical Analysis and Reasoning Skills, each with multiple-choice questions.</p>
 			</section>
+			
+			<section>
+				<h3>Test Duration and Timing</h3>
+				<p>The full MCAT lasts approximately 7 hours and 30 minutes, including optional breaks. Each section is timed as follows:</p>
+				<ul>
+					<li>Biological and Biochemical Foundations: 95 minutes</li>
+					<li>Chemical and Physical Foundations: 95 minutes</li>
+					<li>Psychological, Social, and Biological Foundations: 95 minutes</li>
+					<li>Critical Analysis and Reasoning Skills: 90 minutes</li>
+				</ul>
+				<p>There are short breaks between sections and a longer mid-exam break. Practicing under timed conditions is essential to manage energy and pacing on test day.</p>
+			</section>
+
+
 			<section>
 				<h3>Scoring</h3>
 				<p>Each section is scored from 118 to 132, with a total score range of 472–528, and scores reflect percentile rankings among test takers.</p>
 			</section>
+
+
 			<section>
 				<h3>Purpose of the Exam</h3>
 				<p>The MCAT evaluates readiness for medical school, assessing critical thinking, problem-solving, and knowledge in science and social sciences for admissions decisions.</p>
 			</section>
+
+
 		</main>
+
+
+		<footer>
+
+
+			<p>For questions or support, contact us at <a href="mailto:mhv8sk@virginia.edu">info@studyholic.com</a></p>
+			<p>The information on this site is taken from official MCAT material provided by the AAMC. <a href="https://students-residents.aamc.org/prepare-mcat-exam/prepare-mcat-exam" target="_blank">Visit the AAMC MCAT preparation page</a></p>
+
+
+		</footer>
+
+
 	</body>
+
+
 </html>

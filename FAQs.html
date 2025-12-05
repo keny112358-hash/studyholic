@@ -1,22 +1,25 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
+
+
 	<head>
+
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>FAQ - Studyholic</title>
+		<title>MCAT FAQs - Studyholic</title>
 		<link rel="stylesheet" href="styles.css">
 		<style>
 			body {
 				font-family: Arial, sans-serif;
 				margin: 0;
 				padding: 0;
-				text-align: center;
 				background-color: #fafafa;
 				color: #333;
 				scroll-behavior: smooth;
 			}
-
-
 			header {
 				display: flex;
 				align-items: center;
@@ -24,78 +27,113 @@
 				background-color: white;
 				padding: 10px 20px;
 			}
-
-			header img {
-				height: 50px;
-				cursor: pointer;
-			}
-
-			nav ul {
-				list-style: none;
-				display: flex;
-				margin: 0;
-				padding: 0;
-				gap: 20px;
-			}
-
-			nav ul li a {
-				text-decoration: none;
-				color: #333;
-				font-weight: bold;
-			}
+			header img { height: 50px; cursor: pointer; }
+			nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 20px; }
+			nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
 
 			main {
 				display: grid;
-				grid-template-columns: 1fr;
-				gap: 20px;
-				padding: 20px;
+				grid-template-columns: 2fr 1fr;
+				gap: 30px;
+				max-width: 1200px;
+				margin: 30px auto;
+				padding: 0 20px;
 			}
 
-			h2 {
+			.faq-section {
+				background-color: #e8f4ff;
+				padding: 20px;
+				border-radius: 12px;
+				box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 				margin-bottom: 20px;
+			}
+
+			.faq-section h3 {
+				margin: 0 0 10px 0;
+				font-size: 20px;
+				color: #118ab2;
+			}
+
+			.faq-section p, .faq-section ul {
+				margin: 0;
+				font-size: 16px;
+				line-height: 1.5;
 			}
 
 			.form-section {
 				background-color: #e8e8e8;
 				padding: 20px;
-				border-radius: 10px;
-				max-width: 700px;
-				margin: auto;
-				text-align: left;
+				border-radius: 12px;
+				box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 			}
 
-			@media (min-width: 900px) {
-				main {
-					grid-template-columns: 1fr;
-				}
+			.form-section h3 { margin-top: 0; color: #118ab2; }
+
+			.form-section form {
+				max-width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				padding: 0 10px; /* adds space on left and right */
 			}
 
-			input[type="text"], textarea {
+			.form-section input[type="text"],
+			.form-section input[type="email"],
+			.form-section textarea {
+				max-width: 90%; /* keeps fields from touching the edge */
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+
+			input[type="text"], input[type="email"], textarea {
 				width: 100%;
-				padding: 8px;
-				margin-top: 5px;
-				margin-bottom: 15px;
+				padding: 10px;
 				border: 1px solid #ccc;
-				border-radius: 5px;
+				border-radius: 6px;
+				margin-bottom: 15px;
+				font-size: 16px;
 			}
 
 			input[type="submit"] {
-				padding: 10px 20px;
-				background-color: #333;
-				color: #fff;
+				background-color: #008080;
+				color: white;
 				border: none;
-				border-radius: 5px;
+				padding: 10px 25px;
+				border-radius: 6px;
 				cursor: pointer;
+				font-weight: 600;
 			}
 
-			input[type="submit"]:hover {
-				background-color: #555;
+			input[type="submit"]:hover { background-color: #ff7e33; }
+
+			footer {
+				text-align: center;
+				padding: 20px;
+				background-color: #ffffff;
+				border-top: 2px solid #e0e0e0;
+				color: #777;
+				font-size: 14px;
 			}
 
+			footer p a { color: #006d77; font-weight: 600; text-decoration: none; }
+			footer p a:hover { text-decoration: underline; }
+
+			@media (max-width: 900px) {
+				main { grid-template-columns: 1fr; }
+			}
 		</style>
+
+
 	</head>
+
+
 	<body>
+
+
 		<header>
+
+
 			<a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
 			<nav>
 				<ul>
@@ -106,44 +144,89 @@
 					<li><a href="FAQs.html">FAQs</a></li>
 				</ul>
 			</nav>
+
+
 		</header>
 
-		<main>
-			<h2>Frequently Asked Questions</h2>
-			<section class="form-section">
-				<p>If you have a question, please fill out the form below and we will get back to you:</p>
 
-				<form enctype="multipart/form-data" method="post" action="https://www.response-o-matic.com/mail.php" accept-charset="UTF-8">
-					<div>
-						<input type="hidden" name="acctid" id="acctid" value="1f44tp53e1055x3v" />
-						<input type="hidden" name="formid" id="formid" value="2006681" />
-						<input type="hidden" name="required_vars" id="required_vars" value="name,email,field-01bcf00579d412c" />
-					</div>
-					<table cellspacing="5" cellpadding="5" border="0">
-						<tr>
-							<td valign="top"><strong>Name:</strong></td>
-							<td valign="top"><input type="text" name="name" id="name" size="40" value="" /></td>
-						</tr>
-						<tr>
-							<td valign="top"><strong>Email Address:</strong></td>
-							<td valign="top"><input type="text" name="email" id="email" size="40" value="" /></td>
-						</tr>
-						<tr>
-							<td valign="top"><strong>Question/Message</strong></td>
-							<td valign="top"><textarea name="field-01bcf00579d412c" id="field-01bcf00579d412c" rows="6" cols="40"></textarea></td>
-						</tr>
-						<tr>
-							<td colspan="2" align="center">
-								<input type="submit" value=" Submit Form " />
-							</td>
-						</tr>
-					</table>
-				</form>
-				<br>
-				<center><font face="Arial, Helvetica" size="1"><b>
-				This <a href="https://www.response-o-matic.com">online form</a> was provided by Freedback.
-				</b></font></center>
+		<main>
+
+
+			<div>
+
+
+				<h2>MCAT Frequently Asked Questions</h2>
+
+
+				<section class="faq-section">
+					<h3>What identification is required on test day?</h3>
+					<p>Bring a valid government-issued photo ID. No phones or electronics. Follow official AAMC rules.</p>
 				</section>
+
+
+				<section class="faq-section">
+					<h3>Are there limits on retaking the MCAT?</h3>
+					<p>Max 3 times per year, 2 times in 4 years, 7 times lifetime. Plan attempts strategically. </p>
+				</section>
+
+
+				<section class="faq-section">
+					<h3>How should I use practice tests?</h3>
+					<p>Use official AAMC tests timed. Analyze errors. Simulate test day. Focus on understanding mistakes.</p>
+				</section>
+
+
+				<section class="faq-section">
+					<h3>Which topics should I focus on?</h3>
+					<p>Prioritize high-yield content. Strengthen scientific reasoning. Review weak areas identified in practice tests.</p>
+				</section>
+
+
+				<section class="faq-section">
+					<h3>What should I bring on test day?</h3>
+					<p>ID, registration confirmation, pencils, erasers, approved snacks. No electronics in testing area.</p>
+				</section>
+
+
+			</div>
+
+
+			<div class="form-section">
+
+
+				<h3>Have a Question?</h3>
+				<p>Fill out the form and we will get back to you:</p>
+				<form method="post" action="https://www.response-o-matic.com/mail.php" accept-charset="UTF-8">
+					<input type="hidden" name="acctid" value="1f44tp53e1055x3v">
+					<input type="hidden" name="formid" value="2006681">
+					<input type="hidden" name="required_vars" value="name,email,field-01bcf00579d412c">
+					<label>Name:</label>
+					<input type="text" name="name" required>
+					<label>Email:</label>
+					<input type="email" name="email" required>
+					<label>Question/Message:</label>
+					<textarea name="field-01bcf00579d412c" rows="6" required></textarea>
+					<input type="submit" value="Submit Form">
+				</form>
+
+
+			</div>
+
+
 		</main>
+
+
+		<footer>
+
+
+			<p>Contact us at <a href="mailto:info@studyholic.com">info@studyholic.com</a></p>
+			<p>Info from official AAMC MCAT materials. <a href="https://students-residents.aamc.org/prepare-mcat-exam/prepare-mcat-exam" target="_blank">Visit AAMC MCAT page</a></p>
+
+
+		</footer>
+
+
 	</body>
+
+
 </html>
