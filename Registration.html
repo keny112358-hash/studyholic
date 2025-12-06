@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 
-
 	<head>
-
-
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Registration - Studyholic</title>
@@ -21,8 +16,7 @@
 				color: #333;
 				scroll-behavior: smooth;
 			}
-
-
+			
 			header {
 				display: flex;
 				align-items: center;
@@ -31,13 +25,12 @@
 				padding: 10px 20px;
 				border-bottom: 2px solid #ddd;
 			}
-
-
+			
 			header img {
 				height: 50px;
 				cursor: pointer;
 			}
-
+			
 			nav ul {
 				list-style: none;
 				display: flex;
@@ -45,31 +38,26 @@
 				padding: 0;
 				gap: 20px;
 			}
-
+			
 			nav ul li a {
 				text-decoration: none;
-				color: #004d66;
+				color: #333;
 				font-weight: bold;
-				transition: color 0.3s;
 			}
-
-			nav ul li a:hover {
-				color: #ff9933;
-			}
-
+			
 			main {
 				padding: 20px;
 				max-width: 1200px;
 				margin: auto;
 				text-align: center;
 			}
-
+			
 			h2 {
-				font-size: 1.8em; /* adjust to match other pages */
+				font-size: 1.8em;
 				color: #004d66;
 				margin-bottom: 20px;
 			}
-
+			
 			table {
 				width: 100%;
 				border-collapse: collapse;
@@ -78,37 +66,31 @@
 				background-color: white;
 				border: 1px solid #ccc;
 			}
-
+			
 			th, td {
 				border: 1px solid #ddd;
 				padding: 10px;
 			}
-
+			
 			th {
 				background-color: #007b99;
 				color: white;
 			}
-
+			
 			tr:nth-child(even) {
 				background-color: #f9f9f9;
 			}
-
 			
-
 			section {
 				margin-top: 40px;
 				text-align: left;
 			}
-
+			
 			a {
 				color: #0073e6;
 				text-decoration: none;
 			}
-
-			a:hover {
-				text-decoration: underline;
-			}
-
+			
 			.notes {
 				margin-top: 30px;
 				background-color: #e8f4f8;
@@ -116,23 +98,19 @@
 				border-radius: 10px;
 				text-align: left;
 			}
-
+			
 			.notes h3 {
 				margin-top: 0;
 				color: #004d66;
 			}
 		</style>
-
-
 	</head>
-
-
+	
 	<body>
-
-
+		
+		<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#0073e6;color:#fff;padding:8px 16px;z-index:100;text-decoration:none;transition:top 0.3s;" onfocus="this.style.top='10px';" onblur="this.style.top='-40px';">Skip to main content</a>
+		
 		<header>
-
-
 			<a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
 			<nav>
 				<ul>
@@ -143,25 +121,22 @@
 					<li><a href="FAQs.html">FAQs</a></li>
 				</ul>
 			</nav>
-
-
 		</header>
-
-
-		<main>
-
-
+		
+		
+		
+		<main id="main-content">
 			<h2>MCAT Registration Dates</h2>
-
-
+			
 			<div class="notes">
 				<p><strong>60 Day Deadline:</strong> The earliest registration deadline. Canceling or rescheduling by this date provides the highest refund and flexibility.</p>
 				<p><strong>30 Day Deadline:</strong> The middle registration deadline. You can still make changes, but the refund is smaller and test center choices may be limited.</p>
 				<p><strong>10 Day Deadline:</strong> The final cutoff to make any registration changes or cancellations. After this date, no adjustments are allowed.</p>
 				<p>There are multiple deadlines because the AAMC provides increasing fees and fewer refund options as you get closer to the test date. Registering early gives you more control over where and when you take your MCAT in 2026.</p>
 			</div>
-
-
+			
+			
+			
 			<table>
 				<tr>
 					<th>Test Date</th>
@@ -201,21 +176,19 @@
 				<tr><td>September 11, 2026</td><td>July 13, 2026</td><td>Aug. 12, 2026</td><td>Sept. 1, 2026</td><td>Oct. 13, 2026</td></tr>
 				<tr><td>September 12, 2026</td><td>July 14, 2026</td><td>Aug. 13, 2026</td><td>Sept. 2, 2026</td><td>Oct. 13, 2026</td></tr>
 			</table>
-
-
+			
+			
+			
 			<section>
 				<h3>How to Register</h3>
 				<p>Visit the <a href="https://students-residents.aamc.org/register-mcat-exam/register-mcat-exam" target="_blank">AAMC MCAT registration system</a>, choose your test date and location, fill in your details, and submit payment.</p>
 				<p><strong>Tip:</strong> Seats fill up quickly, especially for early dates. Log in early on registration day.</p>
 			</section>
-
-  
 		</main>
-
-
+		
+		
+		
 		<footer>
-
-
 			<p>For questions or support, contact us at 
 				<a href="mailto:mhv8sk@virginia.edu">info@studyholic.com</a>
 			</p>
@@ -224,12 +197,14 @@
 					Visit the AAMC MCAT preparation page
 				</a>
 			</p>
-
-
+			
+			<p id="last-updated"></p>
+			
+			<script>
+				const lastUpdated = new Date(document.lastModified);
+				const options = { year: 'numeric', month: 'long', day: 'numeric' };
+				document.getElementById('last-updated').textContent = `Last updated: ${lastUpdated.toLocaleDateString(undefined, options)}`;
+			</script>
 		</footer>
-
-
 	</body>
-
-
 </html>

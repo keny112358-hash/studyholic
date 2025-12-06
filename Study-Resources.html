@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 
-
 	<head>
-
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -124,15 +120,14 @@
 			}
 		</style>
 
-
 	</head>
-
 
 	<body>
 
+		<a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:#0073e6;color:#fff;padding:8px 16px;z-index:100;text-decoration:none;transition:top 0.3s;" onfocus="this.style.top='10px';" onblur="this.style.top='-40px';">Skip to main content</a>
+
 
 		<header>
-
 
 			<a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
 			<nav>
@@ -145,15 +140,11 @@
 				</ul>
 			</nav>
 
-
 		</header>
 
-
-		<main>
-
+		<main id="main-content">
 
 			<h2>Study Resources</h2>
-
 
 			<section>
 				<h3>Books & Guides</h3>
@@ -303,7 +294,7 @@
 
 
 				<section class="practice-section">
-					<h3>CARS - Reading Passages </h3>
+					<h3>CARS - Reading Passages </h3>
 					<p><em>Passage from Kaplan MCAT Prep Lesson Book, 6th Edition</em></p>
 					<p>
 						Those who consider the Devil to be a partisan of Evil and angels to be warriors for Good accept the demagogy of the angels. Things are clearly more complicated. Angels are partisans not of Good, but of Divine creation. The Devil, on the other hand, denies all rational meaning to God's world.
@@ -341,9 +332,7 @@
 					</ul>
 				</section>
 
-
 			</div>
-
 
 			<script>
 				function toggleAnswer(button) {
@@ -358,12 +347,9 @@
 				}
 			</script>
 
-
 		</main>
 
-
 		<footer>
-
 
 			<p>For questions or support, contact us at 
 				<a href="mailto:mhv8sk@virginia.edu">info@studyholic.com</a>
@@ -374,11 +360,17 @@
 				</a>
 			</p>
 
+			<p id="last-updated"></p>
+
+				<script>
+					const lastUpdated = new Date(document.lastModified);
+					const options = { year: 'numeric', month: 'long', day: 'numeric' };
+					document.getElementById('last-updated').textContent = `Last 				
+					updated: ${lastUpdated.toLocaleDateString(undefined, options)}`;
+				</script>
 
 		</footer>
 
-
 	</body>
-
 
 </html>

@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 
-
 	<head>
-
-
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Home - Studyholic</title>
@@ -21,7 +16,7 @@
 				color: #333;
 				scroll-behavior: smooth;
 			}
-
+			
 			header {
 				display: flex;
 				align-items: center;
@@ -30,12 +25,13 @@
 				padding: 10px 20px;
 				border-bottom: 2px solid #ddd;
 			}
+
 			
 			header img {
 				height: 50px;
 				cursor: pointer;
 			}
-
+			
 			nav ul {
 				list-style: none;
 				display: flex;
@@ -43,18 +39,13 @@
 				padding: 0;
 				gap: 20px;
 			}
-
+			
 			nav ul li a {
 				text-decoration: none;
 				color: #333;
 				font-weight: bold;
-				transition: color 0.3s;
 			}
-
-			nav ul li a:hover {
-				color: #0073e6;
-			}
-
+			
 			main {
 				display: flex;
 				flex-direction: row;
@@ -62,7 +53,7 @@
 				align-items: stretch;
 				height: 100vh;
 			}
-
+			
 			.button-column {
 				flex: 1;
 				display: flex;
@@ -76,40 +67,40 @@
 				padding: 40px;
 				border-right: 2px solid #ddd;
 			}
-
+			
 			.button-column:last-child {
 				border-right: none;
 			}
-
+			
 			.button-column:hover {
 				background-color: #dcdcdc;
 				transform: scale(1.02);
 			}
-
+			
 			.button-column h2 {
 				font-size: 36px;
 				margin-bottom: 15px;
 			}
-
+			
 			.button-column p {
 				font-size: 18px;
 				max-width: 500px;
 				color: #555;
 			}
-
+			
 			.about-section {
 				background-color: #ffffff;
 				padding: 60px 20px;
 				border-top: 2px solid #ddd;
 				text-align: center;
 			}
-
+			
 			.about-section h2 {
 				font-size: 32px;
 				color: #222;
 				margin-bottom: 20px;
 			}
-
+			
 			.about-section p {
 				font-size: 18px;
 				max-width: 800px;
@@ -117,24 +108,24 @@
 				line-height: 1.6;
 				color: #555;
 			}
-
+			
 			footer {
 				background-color: #f0f0f0;
 				padding: 30px;
 				border-top: 2px solid #ddd;
 				text-align: center;
 			}
-
+			
 			footer a {
 				text-decoration: none;
 				color: #0073e6;
 				font-weight: bold;
 			}
-
+			
 			footer a:hover {
 				text-decoration: underline;
 			}
-
+			
 			@media (max-width: 900px) {
 				main {
 					flex-direction: column;
@@ -148,18 +139,31 @@
 					border-bottom: none;
 				}
 			}
+			
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #0073e6;
+				color: white;
+				padding: 8px 16px;
+				z-index: 100;
+				text-decoration: none;
+				transition: top 0.3s;
+			}
+			
+			.skip-link:focus {
+				top: 10px;
+				outline: 3px solid #ff7e33;
+			}
 		</style>
-
-
 	</head>
-
-
+	
 	<body>
-
-
+		
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		
 		<header>
-
-
 			<a href="index.html"><img src="logo.png" alt="Studyholic Logo"></a>
 			<nav>
 				<ul>
@@ -170,52 +174,49 @@
 					<li><a href="FAQs.html">FAQs</a></li>
 				</ul>
 			</nav>
-
-
 		</header>
-
-
-		<section class="welcome-section">
+		
+		
+		
+		<section class="welcome-section" id="welcome-section">
 			<h2>Welcome to Studyholic</h2>
 			<p>Studyholic provides MCAT info, study guides, and practice questions all in one place. Use it to plan your prep, learn each exam section, and track your progress toward your target score.</p>
 		</section>
-
-
-		<main>
-
-
+		
+		
+		
+		<main id="main-content">
 			<a href="MCAT-Overview.html" class="button-column" style="background-color:#e8f5ff;">
 				<h2>MCAT Info</h2>
 				<p>Learn about the MCAT exam structure, timing, content, and scoring to better prepare for success.</p>
 			</a>
-
-
+			
 			<a href="Study-Resources.html" class="button-column" style="background-color:#fff2e8;">
 				<h2>Study for MCAT</h2>
 				<p>Explore study guides, prep materials, and practice tests master the MCAT.</p>
 			</a>
-
-
 		</main>
-
-
+		
+		
+		
 		<footer>
-
-
 			<p>For questions or support, contact us at 
 				<a href="mailto:mhv8sk@virginia.edu">info@studyholic.com</a>
 			</p>
 			<p>The information on this site is taken from official MCAT material provided by the AAMC.  
 				<a href="https://students-residents.aamc.org/prepare-mcat-exam/prepare-mcat-exam" target="_blank">
-			Visit the AAMC MCAT preparation page
+				Visit the AAMC MCAT preparation page
 				</a>
 			</p>
-
-
+			
+			<p id="last-updated"></p>
+			
+			<script>
+				const lastUpdated = new Date(document.lastModified);
+				const options = { year: 'numeric', month: 'long', day: 'numeric' };
+				document.getElementById('last-updated').textContent = `Last updated: ${lastUpdated.toLocaleDateString(undefined, options)}`;
+			</script>
 		</footer>
-
-
+		
 	</body>
-
-
 </html>
