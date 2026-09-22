@@ -50,6 +50,63 @@
 				grid-template-columns: repeat(3, 1fr);
 				gap: 20px;
 				padding: 20px;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			/* Personalized MCAT Website Banner - restyled to match the site's existing
+			   notes/table palette (light blue, teal headings, flat orange button)
+			   instead of the previous gradient + pill-badge treatment */
+			.mcat-banner {
+				grid-column: 1 / 4;
+				background-color: #e8f4f8;
+				padding: 35px 30px;
+				border-radius: 10px;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 14px rgba(0, 77, 102, 0.15);
+			}
+
+			.mcat-banner .badge {
+				display: block;
+				color: #007b99;
+				font-weight: bold;
+				font-size: 0.95em;
+				margin-bottom: 12px;
+			}
+
+			.mcat-banner h3 {
+				margin: 0 0 14px 0;
+				color: #004d66;
+				font-size: 1.6em;
+				text-align: center;
+			}
+
+			.mcat-banner p {
+				max-width: 750px;
+				margin: 0 auto 26px auto;
+				line-height: 1.6;
+				color: #333;
+				font-size: 1.05em;
+			}
+
+			.mcat-cta-btn {
+				display: inline-block;
+				background-color: #ff7e33;
+				color: #ffffff !important;
+				font-weight: bold;
+				font-size: 1.05em;
+				padding: 14px 34px;
+				border-radius: 6px;
+				text-decoration: none;
+				box-shadow: 0 3px 10px rgba(255, 126, 51, 0.4);
+				transition: background-color 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.mcat-cta-btn:hover {
+				background-color: #e0631b;
+				box-shadow: 0 4px 14px rgba(255, 126, 51, 0.55);
 			}
 
 			section {
@@ -103,6 +160,9 @@
 				main {
 					grid-template-columns: 1fr;
 				}
+				.mcat-banner, .study-tips, h2 {
+					grid-column: 1;
+				}
 				.practice-container {
 					grid-template-columns: 1fr;
 				}
@@ -146,13 +206,25 @@
 
 			<h2>Study Resources</h2>
 
+			<!-- PROMOTIONAL ACTIVE RECALL BUBBLE -->
+			<section class="mcat-banner">
+				<span class="badge">Interactive Practice Tool</span>
+				<h3>Personalized MCAT Drill Platform</h3>
+				<p>
+					Master the MCAT through active recall! Test your knowledge with general standalone questions, level up to unlock passage-based drills, and track your personalized mastery across all subjects with our game-like system.
+				</p>
+				<a href="https://ken-y.infinityfree.me/MCATLogin.php" target="_blank" class="mcat-cta-btn">
+					Try MCAT Studier Now!
+				</a>
+			</section>
+
 			<section>
 				<h3>Books & Guides</h3>
 				<p>Kaplan and Princeton Review books: <a href="https://www.khanacademy.org/test-prep/mcat" target="_blank" class="external-link">
 						Khan Academy’s MCAT Prep
 					</a>.
 				<p>
-					Med School Insiders MCAT Course: 
+					Med School Insiders MCAT Course: 
 					<a href="https://medschoolinsiders.com/all-courses/mcat-course/" target="_blank" class="external-link">
 						Learn more about the Med School Insiders MCAT Course
 					</a><br>
@@ -227,7 +299,7 @@
 						<button onclick="toggleAnswer(this)">Show Answer</button>
 						<li class="answer" style="display:none;">
 							<strong>Answer:</strong> C<br>
-							<strong>Explanation:</strong> This is a Skill 1 question and relates to Content Category 5D, Structure, function, and reactivity of biologically relevant molecules. The functional group that forms during peptide bond formation is an amide group. 
+							<strong>Explanation:</strong> This is a Skill 1 question and relates to Content Category 5D, Structure, function, and reactivity of biologically relevant molecules. The functional group that forms during peptide bond formation is an amide group. 
 							<p style="font-size: 0.85em; margin-top: 10px;">Information retrieved from <a href="https://students-residents.aamc.org/prepare-mcat-exam/whats-mcat-exam-pdf-outline" target="_blank">AAMC MCAT Outline PDF</a></p>
 						</li>
 					</ul>
@@ -248,7 +320,7 @@
 						<button onclick="toggleAnswer(this)">Show Answer</button>
 						<li class="answer" style="display:none;">
 							<strong>Answer:</strong> A<br>
-							<strong>Explanation:</strong> This Skill 2 question requires knowledge from Content Category 1B, Transmission of genetic information from the gene to the protein. Considering the start codon and stop codon in the sequence, the polypeptide encodes two amino acids. 
+							<strong>Explanation:</strong> This Skill 2 question requires knowledge from Content Category 1B, Transmission of genetic information from the gene to the protein. Considering the start codon and stop codon in the sequence, the polypeptide encodes two amino acids. 
 							<p style="font-size: 0.85em; margin-top: 10px;">Information retrieved from <a href="https://students-residents.aamc.org/prepare-mcat-exam/whats-mcat-exam-pdf-outline" target="_blank">AAMC MCAT Outline PDF</a></p>
 						</li>
 					</ul>
@@ -269,7 +341,7 @@
 						<button onclick="toggleAnswer(this)">Show Answer</button>
 						<li class="answer" style="display:none;">
 							<strong>Answer:</strong> C<br>
-							<strong>Explanation:</strong> This Skill 3 question assesses knowledge of Content Category 7B, Social processes that influence human behavior. It requires reasoning skills in research design to identify the independent variable (working alone or in a group) and the dependent variable (each participant's contribution). 
+							<strong>Explanation:</strong> This Skill 3 question assesses knowledge of Content Category 7B, Social processes that influence human behavior. It requires reasoning skills in research design to identify the independent variable (working alone or in a group) and the dependent variable (each participant's contribution). 
 							<p style="font-size: 0.85em; margin-top: 10px;">Information retrieved from <a href="https://students-residents.aamc.org/prepare-mcat-exam/whats-mcat-exam-pdf-outline" target="_blank">AAMC MCAT Outline PDF</a></p>
 						</li>
 					</ul>
@@ -309,7 +381,7 @@
 						<button onclick="toggleAnswer(this)">Show Answer</button>
 						<li class="answer" style="display:none;">
 							<strong>Answer:</strong> C<br>
-							<strong>Explanation:</strong> The passage emphasizes that the word "laughter" refers to two completely contradictory internal attitudes: the Devil's malicious laughter and the angel's rejoicing laughter. This highlights the dual meaning of laughter, making option C correct. 
+							<strong>Explanation:</strong> The passage emphasizes that the word "laughter" refers to two completely contradictory internal attitudes: the Devil's malicious laughter and the angel's rejoicing laughter. This highlights the dual meaning of laughter, making option C correct. 
 							<p style="font-size: 0.85em; margin-top: 10px;">Information retrieved from <em>Kaplan MCAT Prep Lesson Book, 6th Edition</em></p>
 						</li>
 					</ul>
